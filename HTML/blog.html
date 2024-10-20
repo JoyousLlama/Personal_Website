@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/blog.css">
+    <title>[Redacted Title]</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#top" class="nav-link">Top</a>
+        <a href="index" class="nav-link">Home Page</a>
+        <a id="random-link" href="index.html#blog" class="nav-link">Random</a>
+    </nav>
+
+    <header class="blog-hero">
+        <h1>[Redacted Blog Hero Title]</h1>
+        <p>[Redacted blog hero paragraph]</p>
+    </header>
+
+<section class="blog-tags-list">
+	<div id="available-tags" class="section bg-transparent">
+		<h2>Available Tags</h2>
+		<div class="tags-wrapper">
+			<div class="tags-container"></div>
+			<div class="special-tags-container"></div> <!-- This div is for the special tags -->
+		</div>
+	</div>
+</section>
+
+    <section class="blog-posts">
+        <h2>Recent Posts</h2>
+		<div class="blog-posts-container">
+				<!-- Blog posts are inserted dynamically by blog-posts.js -->
+		</div>
+		<div class="pagination-container">
+				<!-- Again, fingers crossed haha -->
+		</div>
+	</section>
+		
+	<footer>
+		<p>&copy; [Redacted Copyright I guess - All Rights Reserved though.]</p>
+	</footer>
+		
+	<script type="module" src="../js/blog-posts.js"></script>
+	
+	
+	<!-- Quick inline script to make the 'Random' link work -->
+	<script>
+	const randomUrls = [
+		'hello-world',
+		'#top',
+		'index',
+		'index#about',
+		'https://google.com'
+	];
+	
+	const randomLink = document.getElementById('random-link');
+	
+	randomLink.addEventListener('click', function (event) {
+		event.preventDefault();
+		const randomUrl = randomUrls[Math.floor(Math.random() * randomUrls.length)];
+		window.location.href = randomUrl;
+	});
+	</script>
+</body>
+</html>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
